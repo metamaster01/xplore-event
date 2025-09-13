@@ -55,8 +55,7 @@ export default function AboutSection() {
                 transition={{ duration: 1, delay: 0.3 }}
                 className="text-muted-foreground mb-12 text-lg"
               >
-                Powered by Passion, Run by Barter
-              </motion.p>
+Passion at the Core, Collaboration at the Heart              </motion.p>
 
               <motion.h3
                 initial={{ opacity: 0, y: 30 }}

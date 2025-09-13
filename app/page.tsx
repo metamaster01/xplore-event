@@ -7,10 +7,10 @@ import RegistrationBanner from "@/components/registration-banner"
 import WhoAreYouSection from "@/components/who-are-you-section"
 import AboutSection from "@/components/about-section"
 import TestimonialSection from "@/components/testimonial-section"
-// import GalleriesSection from "@/components/galleries-section"
+import GallerySection from "@/components/gallery-section"
 // import ReviewsSection from "@/components/reviews-section"
 import ContactSection from "@/components/contact-section"
-// import Footer from "@/components/footer"
+import Footer from "@/components/footer"
 
 export default function HomePage() {
   useEffect(() => {
@@ -35,14 +35,14 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
-      <Header />
+      {/* <Header /> */}
       <main>
         <HeroSection />
         <RegistrationBanner />
         <WhoAreYouSection />
         <AboutSection />
+        <GallerySection />
         <TestimonialSection />
-        {/* <GalleriesSection /> */}
         {/* <ReviewsSection /> */}
         <ContactSection />
       </main>

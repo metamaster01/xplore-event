@@ -11,7 +11,7 @@ const menuItems = [
   { name: "Who Are You", href: "#who-are-you" },
   { name: "About Us", href: "#about" },
   { name: "Galleries", href: "#galleries" },
-  { name: "Reviews", href: "#reviews" },
+  { name: "Testimonials", href: "#testimonials" },
   { name: "Contact Us", href: "#contact" },
 ]
 
@@ -23,11 +23,14 @@ export default function Header() {
       <motion.header
         initial={{ y: -100 }}
         animate={{ y: 0 }}
-        className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-primary/20 px-6 sm:px-2 lg:px-6"
+        className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-primary/20 px-0 sm:px-0 lg:px-6"
       >
         <div className="container mx-auto px-6 py-4 flex items-center justify-between">
           <motion.div whileHover={{ scale: 1.05 }} className="flex items-center space-x-2">
+            <a href="/">
+            
             <Image src="/logo.png" alt="Xplore Logo" width={110} height={90} className="rounded-lg" />
+            </a>
             {/* <span className="text-2xl font-bold text-glow">
               X<span className="text-primary">plore</span>
             </span> */}
@@ -99,13 +102,17 @@ export default function Header() {
 
                 <div className="mt-8 p-4 rounded-lg bg-primary/10 border border-primary/30">
                   <p className="text-sm text-muted-foreground mb-3">Ready to join the vibe?</p>
+                  <a href="#who-are-you">
+
                   <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     className="w-full py-3 px-4 bg-primary text-primary-foreground rounded-lg font-medium hover:bg-primary/90 transition-all duration-300 glow-effect"
+                    
                   >
                     Get Started
                   </motion.button>
+                  </a>
                 </div>
               </div>
             </motion.div>

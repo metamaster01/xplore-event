@@ -153,6 +153,9 @@ export default function HeroSection() {
             We connect your event to the right audiences through media, influencers, and unforgettable experiences.
           </p>
 
+          <a href="#who-are-you">
+
+
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
@@ -161,6 +164,7 @@ export default function HeroSection() {
             Let's Collaborate
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </motion.button>
+          </a>
         </div>
       </motion.div>
 

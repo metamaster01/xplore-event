@@ -78,7 +78,7 @@ export default function TestimonialSection() {
   }
 
   return (
-    <section className="py-20 px-4 bg-black relative overflow-hidden">
+    <section className="py-20 px-4 bg-black relative overflow-hidden" id="testimonials">
       {/* Background glow effects */}
       <div className="absolute inset-0 bg-gradient-to-r from-purple-900/20 via-transparent to-purple-900/20" />
 
