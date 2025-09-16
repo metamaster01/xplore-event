@@ -1,8 +1,17 @@
 "use client"
 
-import { useEffect, useRef, useState } from "react"
+import {  useEffect, useRef, useState } from "react"
 import { motion } from "framer-motion"
 import { Play, Pause, Volume2, VolumeX, ArrowRight } from "lucide-react"
+
+import React, { forwardRef } from "react"
+
+const LazyVideo = forwardRef<HTMLVideoElement, React.VideoHTMLAttributes<HTMLVideoElement>>(
+  ({ ...props }, ref) => {
+    return <video ref={ref} {...props} />
+  }
+)
+LazyVideo.displayName = "LazyVideo"
 
 export default function HeroSection() {
   const videoRef = useRef<HTMLVideoElement>(null)
@@ -74,9 +83,18 @@ export default function HeroSection() {
           </div>
         )}
 
-        <video ref={videoRef} className="w-full h-full object-cover" autoPlay loop muted playsInline preload="auto">
+        {/* Lazy load video using Intersection Observer */}
+        <LazyVideo
+          ref={videoRef}
+          className="w-full h-full object-cover"
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="none"
+        >
           <source src="/hero.mp4" type="video/mp4" />
-        </video>
+        </LazyVideo>
 
         {/* Video Overlay */}
         <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-primary/20 to-black/80 video-overlay" />
